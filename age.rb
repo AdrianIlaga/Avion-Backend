@@ -59,3 +59,7 @@ def age()
 end
 
 age()
+
+# Bonus Joke
+# Did you know that functions in ruby are looking forward to the apocalypse?
+# It's true! They're always waiting for the end.
