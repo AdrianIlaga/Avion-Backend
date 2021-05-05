@@ -1,21 +1,15 @@
 module AdminPermisson
-    def edit_users_profile
+    
+  def edit_users_profile
       puts "Admin updated all users profile"
-    end
-
-    def admin_login
-        login
     end
 
 end
   
   module BuyerPermission
+    
     def buy
       puts "Buyer has bought an item"
-    end
-
-    def buyer_login
-        login
     end
   
   end
@@ -41,11 +35,21 @@ end
   
   class Admin < User
     include AdminPermisson
+
+    def admin_login
+      login
+    end
+
   end
   
   
   class Buyer < User
     include BuyerPermission
+
+    def buyer_login
+      login
+    end
+
   end
   
   
