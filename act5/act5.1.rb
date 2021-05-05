@@ -16,3 +16,5 @@ end
 car_ride = Ride.new(300, 50, 0.107)
 car_ride.total_cost
 
+# Bonus Joke: What do you say when you make a mistake in a Object Oriented Programming Language?
+# OOPs
