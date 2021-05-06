@@ -1,56 +1,71 @@
-class Shape
+class Area
 
-    def area(shape)
+    def get(shape)
         shape.area
     end
 
 end
 
-class Square
+class Shape
 
-    def initialize(side)
-        @side = side
-    end
-
-    def area
-        puts @side**2
+    def show_area(area)
+        puts "The #{@shape} has an area of #{area}"
     end
 
 end
 
-class Rectangle
+class Square < Shape
+
+    def initialize(side)
+        @side = side
+        @shape = "square"
+    end
+
+    def area
+        @side**2
+    end
+
+end
+
+class Rectangle < Shape
 
     def initialize(length, width)
         @length = length
         @width = width
+        @shape = "rectangle"
     end
 
     def area
-        puts @length * @width
+        @length * @width
     end
 
 end
 
-class Triangle
+class Triangle < Shape
 
     def initialize(base, height)
         @base = base.to_f
         @height = height.to_f
+        @shape = "triangle"
     end
 
     def area
-        puts 0.5 * @base * @height
+        0.5 * @base * @height
     end
 
 end
 
-shape = Shape.new
+area = Area.new
 
 square = Square.new(5)
-shape.area(square)
+area1 = area.get(square)
+square.show_area(area1)
+
 
 rectangle = Rectangle.new(6, 9)
-shape.area(rectangle)
+area2 = area.get(rectangle)
+rectangle.show_area(area2)
 
 triangle = Triangle.new(4, 20)
-shape.area(triangle)
+area3 = area.get(triangle)
+triangle.show_area(area3)
